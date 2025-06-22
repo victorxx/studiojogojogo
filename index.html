@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Página sobre estúdios de jogos em São Paulo e Vitória, com lista de jogos lançados." />
+<meta name="author" content="Seu Nome ou Sua Empresa" />
+<meta name="keywords" content="jogos, game studios, São Paulo, Vitória, jogos brasileiros, estúdios de jogos, games indie" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="Content-Language" content="pt-BR" />
+<meta name="theme-color" content="#007bff" />
+<meta name="format-detection" content="telephone=no" />
+  <title>Estúdios e Jogos Lançados – São Paulo e Vitória</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      color: #222;
+    }
+
+    /* Container do vídeo de fundo */
+    .video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none; /* vídeo não atrapalha clique */
+    }
+
+    .video-background iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.78vh; /* para manter proporção 16:9 */
+      height: 100vh;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    /* Conteúdo da página fica sobre o vídeo */
+    .content {
+      position: relative;
+      max-width: 1200px;
+      margin: 40px auto 80px auto;
+      padding: 20px 25px;
+      background-color: rgba(255 255 255 / 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #003366;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #0055aa;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e0e0;
+    }
+
+    /* Botão conferir fixo no canto inferior direito */
+    a[href="loja.html"] {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    a[href="loja.html"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 768px) {
+      .content {
+        margin: 20px 10px 80px 10px;
+        padding: 15px 15px;
+      }
+      table {
+        font-size: 0.8rem;
+      }
+      a[href="loja.html"] {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="content">
+    <header>
+      <h1>Estúdios de Jogos em São Paulo e Vitória</h1>
+      <p>Confira os principais desenvolvedores de games no Brasil e os títulos que já foram lançados.</p>
+    </header>
+
+    <section>
+      <h2>🎮 Estúdios em São Paulo</h2>
+      <p style="font-size: 14px; color: #555;">
+        Atualizado no dia <span id="data"></span>
+      </p>
+      <script>
+        const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR');
+        document.getElementById('data').textContent = dataFormatada;
+      </script>
+      <table>
+        <thead>
+          <tr>
+            <th>Estúdio</th>
+            <th>Localização</th>
+            <th>Especialidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Pulsatrix Studios</td><td>São Paulo (remoto)</td><td>Terror psicológico</td></tr>
+          <tr><td>Wildlife Studios</td><td>Itaim Bibi, SP</td><td>Mobile Games</td></tr>
+          <tr><td>Saphire Game Studio</td><td>Jardim Ângela, SP</td><td>Jogos indie e autorais</td></tr>
+          <tr><td>Quasares Game Studio</td><td>Ribeirão Preto, SP</td><td>História e simuladores</td></tr>
+          <tr><td>Duaik</td><td>São Paulo</td><td>Folclore brasileiro</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>🎮 Estúdios em Vitória (ES)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Estúdio</th>
+            <th>Localização</th>
+            <th>Especialidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monomyto Game Studio</td><td>Vitória, ES</td><td>Jogos 2D e 3D criativos</td></tr>
+          <tr><td>TreeGame</td><td>Vitória, ES</td><td>Apps educativos e gamificação</td></tr>
+          <tr><td>Split Studio</td><td>Praia do Canto, Vitória</td><td>Games e animação</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>🕹️ Jogos Lançados por Estúdios Brasileiros</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Estúdio</th>
+            <th>Jogo</th>
+            <th>Ano</th>
+            <th>Gênero / Plataforma</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Pulsatrix Studios</td><td>Fobia – St. Dinfna Hotel</td><td>2022</td><td>Terror psicológico / PC, PS, Xbox</td></tr>
+          <tr><td>Pulsatrix Studios</td><td>A.I.L.A</td><td>2024 (em desenvolvimento)</td><td>Ficção científica / PC</td></tr>
+          <tr><td>Wildlife Studios</td><td>Sniper 3D</td><td>2017</td><td>Mobile / Tiro</td></tr>
+          <tr><td>Wildlife Studios</td><td>Zooba</td><td>2019</td><td>Mobile / Battle Royale</td></tr>
+          <tr><td>Wildlife Studios</td><td>Tennis Clash</td><td>2018</td><td>Mobile / Esporte</td></tr>
+          <tr><td>Duaik</td><td>Aritana e a Pena da Harpia</td><td>2015</td><td>Plataforma / Xbox One, PC</td></tr>
+          <tr><td>Duaik</td><td>Aritana e o Pincel da Morte</td><td>2019</td><td>Aventura / Xbox One, Steam</td></tr>
+          <tr><td>Aquiris Game Studio</td><td>Horizon Chase</td><td>2015</td><td>Corrida / Multi</td></tr>
+          <tr><td>Aquiris Game Studio</td><td>Horizon Chase Turbo</td><td>2018</td><td>Corrida retrô / PC, PS4, Switch</td></tr>
+          <tr><td>Behold Studios</td><td>Knights of Pen and Paper</td><td>2013</td><td>RPG / PC, Mobile</td></tr>
+          <tr><td>Behold Studios</td><td>Chroma Squad</td><td>2015</td><td>RPG tático / PC, consoles</td></tr>
+          <tr><td>Behold Studios</td><td>Out There Somewhere</td><td>2012</td><td>Plataforma / PC, Mobile</td></tr>
+          <tr><td>Monomyto Game Studio</td><td>Chroma Squad 2</td><td>2025 (previsto)</td><td>RPG tático / PC, consoles</td></tr>
+          <tr><td>Wildlife Studios</td><td>War Machines</td><td>2015</td><td>Mobile / Ação, Tanques</td></tr>
+          <tr><td>Wildlife Studios</td><td>Looney Tunes: World of Mayhem</td><td>2019</td><td>Mobile / Estratégia</td></tr>
+          <tr><td>Aquiris Game Studio</td><td>Ballistic Overkill</td><td>2016</td><td>FPS / PC</td></tr>
+          <tr><td>Behold Studios</td><td>Knights of Pen and Paper 2</td><td>2017</td><td>RPG / PC, Mobile</td></tr>
+          <tr><td>Frogames</td><td>Celeste</td><td>2018</td><td>Plataforma / Multi</td></tr>
+          <tr><td>Flux Games</td><td>Oceanhorn 2</td><td>2019</td><td>Aventura / Multi</td></tr>
+          <tr><td>JoyMasher</td><td>Oniken</td><td>2012</td><td>Action platformer / PC, consoles</td></tr>
+          <tr><td>JoyMasher</td><td>Odallus: The Dark Call</td><td>2015</td><td>Metroidvania / PC, consoles</td></tr>
+          <tr><td>QUByte Interactive</td><td>Blazing Chrome</td><td>2019</td><td>Run and Gun / PC, consoles</td></tr>
+          <tr><td>QUByte Interactive</td><td>Oniken</td><td>2012</td><td>Action Platformer / PC, consoles</td></tr>
+          <tr><td>Hoplon Infotainment</td><td>Heavy Metal Machines</td><td>2016</td><td>MOBA / PC</td></tr>
+          <tr><td>Behold Studios</td><td>Epic Manager</td><td>2023</td><td>RPG / PC</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer style="text-align:center; color:#555; margin-top: 30px;">
+      &copy;ATUALIZADO ETERNAMENTE
+    </footer>
+  </div>
+<!------------------------BACKGROUNDVIDEO-->
+  <div class="video-background">
+    <iframe
+      src="https://www.youtube.com/embed/R8V7TwlYCt0?autoplay=1&mute=1&controls=0&loop=1&playlist=R8V7TwlYCt0&modestbranding=1&rel=0"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      ></iframe>
+      
+<!------------------------BACKGROUNDVIDEO-->
+  </div>
+<!---------------------BACKGROUNDVIDEO-->
+<!---------------------------PROPAGANDA-->
+  <a href="loja.html">CONFERIR</a>
+<!----------------PROPAGANDA-->
+</body>
+</html>
